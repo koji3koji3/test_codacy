@@ -31,5 +31,5 @@ function typeMismatchExample() {
 missingVariableExample(); // ミス1を示す
 missingSemicolonExample(); // ミス2を示す
 missingArgumentExample(); // ミス3を示す
-missingReturnValueExample(3); // ミス4を示す
+missingReturnValueExample(3, 7); // ミス4を示す
 typeMismatchExample(); // ミス5を示す
