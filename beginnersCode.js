@@ -1,13 +1,13 @@
 // ミス1: 変数を宣言せずに使用する
 function missingVariableExample() {
-  console.log(myVariable); // myVariableが未定義のまま使用されている
+  console.log(myVariable);
 }
 
 // ミス2: セミコロンを忘れる
 function missingSemicolonExample() {
-  var x = 5;
-  var y = 10; // セミコロンがない
-  console.log(x + y);
+  var x = 5
+  var y = 10
+  console.log(x + y)
 }
 
 // ミス3: 関数の引数を忘れる
@@ -24,7 +24,7 @@ function missingReturnValueExample(a, b) {
 function typeMismatchExample() {
   var x = "5";
   var y = 10;
-  console.log(x + y); // 文字列と数値の加算が行われる
+  console.log(x + y);
 }
 
 // 関数呼び出し例
