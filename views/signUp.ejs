@@ -1,0 +1,62 @@
+<%- include('./header') %>
+<body class="bg-light">
+    <div class="container">
+        <script type="text/javascript">
+            function PostCheck(){
+                var checked = confirm("入力内容を送信します");
+                if (checked == true) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        </script>
+        <!-- card -->
+        <div>
+            <form id='form'name='form' method="post" action="/signUp" class="bg-light">
+                <h4 class="text-center mt-3 bg-success text-white">利用申請</h4>
+                <br>
+                <!-- <div class="text-center">
+                    <img src="<%= iconUrl %>" class="rounded-circle w-25 border-danger" alt="...">
+                </div> -->
+                  
+                <div class="form-group">
+                    <label for="reportCategory" class="row ml-1">
+                        <h5>1.学籍番号</h5 >
+                    </label>
+
+                    <input type="number" class="form-control border-dark" name="student_number" size="30" minlength="8" maxlength="8" required>
+                </div>
+                
+                <!--  -->
+                <div class="form-group">
+                    <label for="attendance" class="row ml-1">
+                        <h5>2.氏名</h5>
+                    </label>
+                    <input type="text" class="form-control border-dark" name="full_name" size="30" minlength="1" maxlength="30" required>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label for="attendance" class="row ml-1">
+                        <h5>3.認証コード</h5>
+                    </label>
+                    <input type="password" class="form-control border-dark" name="authentication_code" size="30" minlength="5" maxlength="5" required>
+                
+                </div>
+
+                <input type="hidden"  name="userId" value="<%= userId %>">
+                <input type="hidden" name="displayName" value="<%= displayName %>">
+
+                <br>
+                <div class="row">
+                    <input type="submit" class="mx-auto btn btn-success btn-lg w-50" onClick="return PostCheck()"></button>
+                </div>
+
+            </form>
+                
+        </div>
+            
+    </div>
+</body>
+<%- include('./footer') %>

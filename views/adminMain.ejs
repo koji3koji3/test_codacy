@@ -1,0 +1,56 @@
+<%- include('./header') %>
+<body class="bg-light">
+    <div class="container">
+        <!-- card -->
+        <div>
+            <form action=""　class="bg-light">
+                <h4 class="text-center mt-3 bg-secondary text-white">メインページ</h4>
+                <br>
+                <div class="form-group">
+                    <!-- 遅刻欠席の連絡チェック -->
+                    <div class="card row mx-auto" style="width: 100%;">
+                        <div class="card-body">
+                          <h5 class="card-title">遅刻 欠席連絡一覧</h5>
+                          <p class="card-text d-inline-block">生徒の報告内容が一覧表示されます。</p>
+                          <a href="/adminReportList" class="btn btn-secondary d-inline-block float-right">→</a>
+                        </div>
+                    </div>
+
+                    <!-- 公欠者設定 -->
+                    <div class="card row mx-auto" style="width: 100%;">
+                        <div class="card-body">
+                          <h5 class="card-title">公欠者設定</h5>
+                          <p class="card-text d-inline-block">公欠者の設定を行えます。</p>
+                          <a href="#" class="btn btn-secondary d-inline-block float-right">→</a>
+                        </div>
+                    </div>
+
+                    <!-- 出席者確認 -->
+                    <div class="card row mx-auto" style="width: 100%;">
+                        <div class="card-body">
+                          <h5 class="card-title">出席者確認</h5>
+                          <p class="card-text d-inline-block">出席情報を確認出来ます。</p>
+                          <a href="#" class="btn btn-secondary d-inline-block float-right">→</a>
+                        </div>
+                    </div>
+
+                    <!-- 利用申請承認 -->
+                    <div class="card row mx-auto" style="width: 100%;">
+                        <div class="card-body">
+                          <h5 class="card-title">利用申請承認</h5>
+                          <p class="card-text d-inline-block">生徒の利用申請をここで承認します。</p>
+                          <a href="/adminApplicationApproval" class="btn btn-secondary d-inline-block float-right">→</a>
+                        </div>
+                    </div>
+
+
+                </div>
+                
+                
+            </form>
+                
+        </div>
+            
+    </div>
+</body>
+<%- include('./footer') %>

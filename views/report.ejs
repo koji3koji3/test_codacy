@@ -1,0 +1,54 @@
+<%- include('./header') %>
+<body class="bg-light">
+    <div class="container">
+        <!-- card -->
+        <div>
+            <form action="/report" method="post" class="bg-light">
+                <h4 class="text-center mt-3 bg-danger text-white">遅刻・欠席報告</h4>
+                <br>
+                <div class="form-group">
+                    <label for="reportCategory" class="row ml-1">
+                        <h5>1.報告種別</h5 >
+                    </label>
+                    
+                    <select class="form-control row ml-1 border-dark" name="reportCategory" required>
+                        <option value="">選択してください</option>
+                        <% for (var i = 0; i < reportCategory.length; i++) { %>
+                            <option value="<%= i %>"><%= reportCategory[i] %></option>
+                        <% } %>
+                    </select>
+                </div>
+                
+                <!--  -->
+                <div class="form-group">
+                    <label for="attendance" class="row ml-1">
+                        <h5>2.登校予定時間</h5>
+                    </label>
+                    <select class="form-control row ml-1 border-dark" name="attendanceTime" required>
+                        <option value="">選択してください</option>
+                        <% for (var i = 1; i < 7; i++) { %>
+                            <option value="<%= i %>"><%= i %>時間目</option>
+                        <% } %>
+                            <option value="100">欠席</option>
+                    </select>
+                    
+                </div>
+
+                <div class="form-group">
+                    <label for="reportDetail" class="row ml-1"><h5>3.報告内容</h5></label>
+                    <!-- <input type="text" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password"> -->
+                    <textarea class="form-control ml-1 border-dark" name="reportDetail" id="" cols="10" rows="4" ></textarea>
+                </div>
+                <input type="hidden"  name="userId" value="<%= userId %>">
+                <input type="hidden" name="displayName" value="<%= displayName %>">
+                <div class="row">
+                    <button type="submit" class="mx-auto btn btn-danger btn-lg w-50">報告する</button>
+                </div>
+
+            </form>
+                
+        </div>
+            
+    </div>
+</body>
+<%- include('./footer') %>
